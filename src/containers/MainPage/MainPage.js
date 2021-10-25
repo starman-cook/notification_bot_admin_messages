@@ -41,11 +41,11 @@ const MainPage = () => {
         setIsModal(false)
     }
 
-    const deleteMessageHandler = (id) => {
+    const deleteMessageHandler = async (id) => {
         const confirmation = prompt("Вы уверены, что хотите удалить это сообщение? Напишите 'yes' если правда хотите")
         if (confirmation  === "yes") {
-            dispatch(deleteMessage(id, password))
-            dispatch(getAllMessages())
+            await dispatch(deleteMessage(id, password))
+            await dispatch(getAllMessages())
         }
     }
 

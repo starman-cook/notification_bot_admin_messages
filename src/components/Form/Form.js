@@ -58,7 +58,7 @@ const Form = (props) => {
         setDateInputs(copyDateInputs)
     }
 
-    const submitHandler = () => {
+    const submitHandler = async () => {
         let copyDateInputs = [...dateInputs]
         for (let i = 0; i < copyDateInputs.length; i++) {
             copyDateInputs[i].week += copyDateInputs[i].month * 4 - 4
@@ -69,11 +69,11 @@ const Form = (props) => {
             weeksAndTime: copyDateInputs
         }
         if (id) {
-            dispatch(updateMessage(id, obj, password))
+            await dispatch(updateMessage(id, obj, password))
         } else {
-            dispatch(createMessage(obj, password))
+            await dispatch(createMessage(obj, password))
         }
-        dispatch(getAllMessages())
+        await dispatch(getAllMessages())
         props.closeModal()
     }
 
