@@ -1,0 +1,67 @@
+.Form {
+    width: 100%;
+}
+.Form__form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+.Form__dateInputBlock {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #f34200;
+}
+.Form__dateInputBlock--input {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background: lightgrey;
+    width: 70px;
+}
+.Form__dateInputBlock--select {
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background: lightgrey;
+}
+.Form__button {
+    background: orangered;
+    padding: 10px;
+    width: 150px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.Form__button:hover {
+    background: lightgreen;
+
+}
+
+.Form__form--textarea {
+    height: 70vh;
+    resize: none;
+}
+
+.Form__form--buttonSubmit {
+    padding: 5px;
+    max-width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    background: #f34200;
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px 0;
+    border: none;
+}
+.Form__form--buttonSubmit:hover {
+    background: lightgreen;
+    color: black;
+}
+
+.Form__form--buttonSubmit:active {
+    transform: scale(0.9);
+}

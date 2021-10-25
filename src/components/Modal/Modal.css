@@ -1,0 +1,21 @@
+.Modal_bg {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(50,50,50, 0.5);
+    cursor: pointer;
+}
+.Modal {
+    position: absolute;
+    /*height: 80vh;*/
+    width: 70vw;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+    background: white;
+    padding: 10px;
+}

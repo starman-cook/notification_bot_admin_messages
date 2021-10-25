@@ -1,0 +1,22 @@
+.Button {
+    padding: 5px;
+    max-width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    background: #f34200;
+    transition: 0.2s;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px 0;
+}
+.Button:hover {
+    background: lightgreen;
+    color: black;
+}
+
+.Button:active {
+    transform: scale(0.9);
+}

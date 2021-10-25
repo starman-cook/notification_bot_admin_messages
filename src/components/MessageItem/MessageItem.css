@@ -1,0 +1,31 @@
+.MessageItem {
+    background: lightgray;
+    padding: 10px;
+    margin: 10px 0;
+}
+.MessageItem__datesList {
+    list-style: none;
+}
+.MessageItem__messageText {
+    background: white;
+    padding: 5px;
+    border: none;
+    resize: none;
+    width: 98%;
+    min-height: 300px;
+}
+.MessageItem__datesLine {
+    color: white;
+    background: #393939;
+    padding: 3px;
+}
+.MessageItem__datesLine--text {
+    margin-right: 10px;
+}
+
+.MessageItem__buttonsBlock {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+    width: 60%;
+}
