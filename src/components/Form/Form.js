@@ -58,7 +58,8 @@ const Form = (props) => {
         setDateInputs(copyDateInputs)
     }
 
-    const submitHandler = async () => {
+    const submitHandler = async (event) => {
+        event.preventDefault()
         let copyDateInputs = [...dateInputs]
         for (let i = 0; i < copyDateInputs.length; i++) {
             copyDateInputs[i].week += copyDateInputs[i].month * 4 - 4
@@ -79,7 +80,7 @@ const Form = (props) => {
 
     return (
         <div className={"Form"}>
-            <form onSubmit={() => {submitHandler()}} className={"Form__form"}>
+            <form onSubmit={(event) => {submitHandler(event)}} className={"Form__form"}>
                 {dateInputs.map((el, i) => {
                     return <div key={i} className={"Form__dateInputBlock"}>
                                 <input onChange={(event) => {dateInputsHandler(event, i, 0, 15)}} name={"month"} value={el.month || ""} min="1" className={"Form__dateInputBlock--input"} required type="number" placeholder={"Месяц"}/>

@@ -9,11 +9,12 @@
     cursor: pointer;
 }
 .Modal {
-    position: absolute;
+    position: fixed;
     /*height: 80vh;*/
     width: 70vw;
     top: 10%;
     left: 50%;
+    bottom: 10%;
     transform: translate(-50%, 0);
     z-index: 2;
     background: white;

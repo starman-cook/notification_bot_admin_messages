@@ -81,12 +81,15 @@ const MainPage = () => {
     return (
         <div className={"MainPage"}>
             <header className={"MainPage__header"}>
-                <Button
-                    text={"Создать новое сообщение"}
-                    click={() => {openNewAdminMessageModal()}}
-                />
-                <input className={"MainPage__header__input"} type="text" placeholder={"Пароль"} onChange={(event) => {getPasswordInput(event)}}/>
-            </header>
+                <div className={"MainPage__header--container"}>
+                    <Button
+                        text={"Создать новое сообщение"}
+                        click={() => {openNewAdminMessageModal()}}
+                    />
+                    <input className={"MainPage__header__input"} type="text" placeholder={"Пароль"} onChange={(event) => {getPasswordInput(event)}}/>
+
+                </div>
+               </header>
             {isModal ? modal : null}
             {allMessages}
         </div>
