@@ -1,18 +1,23 @@
-.MainPage {
+.AdminMessages {
     max-width: 1000px;
-    margin: 100px auto;
+    margin: 220px auto;
     padding: 10px;
 }
 
-.MainPage__header {
+.AdminMessages__header {
     position: fixed;
     background: linear-gradient(to bottom, rgba(50,50,50, 1), rgba(50,50,50, 0));
-    top: 0;
+    top: 120px;
     left: 0;
     right: 0;
     padding: 20px 0;
 }
-.MainPage__header--container {
+.AdminMessages__header--container {
     max-width: 1000px;
     margin: 0 auto;
+}
+
+.AdminMessages__header--passwordMessage {
+    margin-left: 10px;
+    color: white;
 }

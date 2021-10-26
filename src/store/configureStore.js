@@ -3,6 +3,7 @@ import thunkMiddleware from "redux-thunk"
 import { connectRouter, routerMiddleware } from "connected-react-router"
 import { createBrowserHistory } from "history"
 import messagesReducer from "./messages/messagesReducer";
+import logsReducer from "./logs/logsReducer";
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -10,6 +11,7 @@ export const history = createBrowserHistory()
 
 const rootReducer = combineReducers({
     messages: messagesReducer,
+    logs: logsReducer,
     router: connectRouter(history),
 });
 

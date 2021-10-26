@@ -19,12 +19,14 @@ const MessageItem = ({mes, clickDelete, clickUpdate}) => {
     let allDates
     if (mes.weeksAndTime.length) {
         allDates = mes.weeksAndTime.map((el, i) => {
+            const hour = el.time?.hour > 9 ? el.time?.hour : "0" + el.time?.hour
+            const minutes = el.time?.minutes > 9 ? el.time?.minutes : "0" + el.time?.minutes
             return (
                 <li key={i} className={"MessageItem__datesLine"}>
                     <span className={"MessageItem__datesLine--text"}>Месяц {Math.ceil(el.week / 4)}</span>
                     <span className={"MessageItem__datesLine--text"}>Неделя {el.week % 4 || 4}</span>
                     <span className={"MessageItem__datesLine--text"}>{weekDays[el.time.day]}</span>
-                    <span className={"MessageItem__datesLine--text"}>в {el.time.hour}:{el.time.minutes}</span>
+                    <span className={"MessageItem__datesLine--text"}>в {hour}:{minutes}</span>
                 </li>
             )
         })

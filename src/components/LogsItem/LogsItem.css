@@ -1,0 +1,24 @@
+.LogsItem {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+}
+.LogsItem__text {
+    color: #4e4e4e;
+}
+.LogsItem__text--number {
+    font-size: 10px;
+    border: 1px solid #4e4e4e;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LogsItem__text--date {
+    font-style: italic;
+    font-size: 12px;
+}
+.LogsItem__text--level {}
+.LogsItem__text--argument {}

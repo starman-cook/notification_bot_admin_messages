@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import "./MainPage.css"
+import "./AdminMessages.css"
 import MessageItem from "../../components/MessageItem/MessageItem";
 import {useDispatch, useSelector} from "react-redux";
 import {deleteMessage, getAllMessages} from "../../store/messages/messagesActions";
@@ -7,7 +7,7 @@ import Button from "../../components/UI/Button/Button";
 import Modal from "../../components/Modal/Modal";
 
 
-const MainPage = () => {
+const AdminMessages = () => {
     const dispatch = useDispatch()
     const messages = useSelector(state => state.messages.messages)
 
@@ -79,14 +79,15 @@ const MainPage = () => {
     }
 
     return (
-        <div className={"MainPage"}>
-            <header className={"MainPage__header"}>
-                <div className={"MainPage__header--container"}>
+        <div className={"AdminMessages"}>
+            <header className={"AdminMessages__header"}>
+                <div className={"AdminMessages__header--container"}>
                     <Button
                         text={"Создать новое сообщение"}
                         click={() => {openNewAdminMessageModal()}}
                     />
-                    <input className={"MainPage__header__input"} type="text" placeholder={"Пароль"} onChange={(event) => {getPasswordInput(event)}}/>
+                    <input className={"AdminMessages__header__input"} type="text" placeholder={"Пароль"} onChange={(event) => {getPasswordInput(event)}}/>
+                    <span className={"AdminMessages__header--passwordMessage"}>Обязательно введите пароль, иначе ничего не сработает!</span>
 
                 </div>
                </header>
@@ -96,4 +97,4 @@ const MainPage = () => {
     )
 }
 
-export default MainPage
+export default AdminMessages

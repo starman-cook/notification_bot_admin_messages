@@ -1,0 +1,27 @@
+.Layout {}
+.Layout__header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgb(50,50,50);
+    height: 120px;
+}
+
+.Layout__header--link {
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Layout__header--link:hover {
+    color: #f34200;
+}
+
+.Layout__header--container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto 0;
+    justify-content: space-between;
+
+}
